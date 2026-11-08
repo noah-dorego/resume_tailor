@@ -1,0 +1,203 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+% Copyright (c) 2020 Jake Gutierrez
+%
+% Modified for resume-tailor: the two pdfTeX-only lines (glyphtounicode and
+% \pdfgentounicode) are wrapped in \ifdefined so this preamble also compiles
+% with XeTeX-based engines such as Tectonic. pdfLaTeX (Overleaf) output is unchanged.
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+\fi
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\ifdefined\pdfgentounicode
+  \pdfgentounicode=1
+\fi
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Alex Rivera} \\ \vspace{1pt}
+    \small 555-123-4567 $|$
+    \href{mailto:alex.rivera@example.com}{\underline{alex.rivera@example.com}} $|$
+    \href{https://www.linkedin.com/in/alexrivera}{\underline{linkedin.com/in/alexrivera}} $|$
+    \href{https://github.com/alexrivera}{\underline{github.com/alexrivera}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Northfield University}{Toronto, ON}
+      {Bachelor of Science in Computer Science, Minor in Statistics}{Sep. 2022 -- Apr. 2026}
+      \resumeItemListStart
+        \resumeItem{GPA: 3.8/4.0; Relevant Coursework: Distributed Systems, Databases, Operating Systems, Computer Networks}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineer Intern}{May 2025 -- Aug. 2025}
+      {Lumen Payments -- Merchant Platform}{Toronto, ON}
+      \resumeItemListStart
+        \resumeItem{Built a Go payout reconciliation service consuming Kafka ledger events, cutting reconciliation delay from 24 hours to under 5 minutes}
+        \resumeItem{Added idempotency keys and retries to the payout API, taking duplicate payouts from \textasciitilde{}12 per month to 0 in the 8 weeks after launch}
+        \resumeItem{Reduced p95 latency of the merchant balance gRPC endpoint from 420ms to 90ms with load tests and PostgreSQL index tuning}
+        \resumeItem{Deployed services to Kubernetes with Helm and added Grafana dashboards and alerts for on-call visibility}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Full-Stack Developer Intern}{May 2024 -- Aug. 2024}
+      {Brightpath Learning -- Student Experience}{Remote}
+      \resumeItemListStart
+        \resumeItem{Designed RESTful APIs in Node.js \& Express for assignment submissions, enforcing per-school PostgreSQL row-level security}
+        \resumeItem{Cut image upload failures from 6\% to under 0.5\% by moving uploads to S3 presigned URLs with a Lambda thumbnail generator}
+        \resumeItem{Raised test coverage from 35\% to 78\% with Jest and wired the suite into GitHub Actions CI/CD}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Teaching Assistant, Data Structures}{Sep. 2023 -- Apr. 2024}
+      {Northfield University}{Toronto, ON}
+      \resumeItemListStart
+        \resumeItem{Built a Python autograder with Docker sandboxes that reduced grading time for a team of 4 TAs}
+        \resumeItem{Led weekly tutorials for 35 students on trees, graphs, and hashing in Java}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{tinykv} $|$ \emph{Go, Raft, gRPC} $|$ \href{https://github.com/alexrivera/tinykv}{\underline{github.com/alexrivera/tinykv}}}{Oct. 2023 -- Dec. 2023}
+          \resumeItemListStart
+            \resumeItem{Implemented Raft leader election and log replication in Go for a sharded key-value store}
+            \resumeItem{Wrote a fault-injection harness that kills and partitions nodes to verify linearizability}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{DocuChat} $|$ \emph{Python, FastAPI, PostgreSQL, pgvector, Docker, AWS ECS}}{Jan. 2025 -- Present}
+          \resumeItemListStart
+            \resumeItem{Built a retrieval-augmented generation (RAG) app with FastAPI that answers questions over PDFs with cited sources}
+            \resumeItem{Raised answer accuracy on a 50-question eval set from 64\% to 82\% with hybrid keyword and pgvector search in PostgreSQL}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Go, Python, TypeScript, Java, SQL, JavaScript, C++, Bash} \\
+     \textbf{Frameworks \& Libraries}{: gRPC, Node.js, Express, FastAPI, React, Next.js, Jest, pytest} \\
+     \textbf{Cloud, DevOps \& Databases}{: PostgreSQL, Kafka, Kubernetes, Docker, AWS (Lambda, S3, ECS), Terraform, GitHub Actions, Redis} \\
+     \textbf{Tools \& Platforms}{: Git, Linux, Grafana, Helm, Claude Code, Cursor}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}

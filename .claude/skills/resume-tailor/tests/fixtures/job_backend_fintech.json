@@ -1,0 +1,51 @@
+{
+  "source": {
+    "url": "https://boards.greenhouse.io/northwindpay/jobs/1234567",
+    "method": "ats-api",
+    "confidence": "high",
+    "attempted": ["https://boards-api.greenhouse.io/v1/boards/northwindpay/jobs/1234567"],
+    "retrieved": "2026-11-07"
+  },
+  "company": "Northwind Pay",
+  "title": "Software Engineer, Backend (New Grad)",
+  "location": "Toronto, ON (Hybrid)",
+  "employment_type": "Full-time",
+  "seniority": "new-grad",
+  "years_experience": 0,
+  "domain": "fintech payments",
+  "company_summary": "Northwind Pay builds payout and reconciliation infrastructure for online marketplaces.",
+  "responsibilities": [
+    "Build and operate backend services that move money between marketplaces and their sellers",
+    "Design reliable, idempotent APIs used by internal teams and external partners",
+    "Own services in production, including on-call, observability, and incident follow-ups",
+    "Collaborate with product and risk teams on new payout features"
+  ],
+  "requirements": [
+    { "text": "BS in Computer Science or equivalent experience, graduating by mid-2026", "category": "core-technical", "required": true },
+    { "text": "Proficiency in Go, Java, or Python", "category": "core-technical", "required": true },
+    { "text": "Experience with relational databases such as PostgreSQL", "category": "core-technical", "required": true },
+    { "text": "Understanding of distributed systems fundamentals", "category": "core-technical", "required": true },
+    { "text": "Experience with Kafka or other event streaming systems", "category": "supporting-technical", "required": false },
+    { "text": "Familiarity with Kubernetes and Docker", "category": "supporting-technical", "required": false },
+    { "text": "Experience with CI/CD and automated testing", "category": "process", "required": false },
+    { "text": "Clear written communication", "category": "soft-skill", "required": true },
+    { "text": "Payments or fintech experience is a bonus", "category": "nice-to-have", "required": false },
+    { "text": "Thrive in a fast-paced environment", "category": "boilerplate", "required": false }
+  ],
+  "keywords": [
+    { "term": "Go", "priority": "required", "category": "hard-skill" },
+    { "term": "PostgreSQL", "priority": "required", "category": "hard-skill" },
+    { "term": "distributed systems", "priority": "required", "category": "hard-skill" },
+    { "term": "APIs", "priority": "required", "category": "hard-skill", "aliases": ["API"] },
+    { "term": "Kafka", "priority": "preferred", "category": "hard-skill" },
+    { "term": "Kubernetes", "priority": "preferred", "category": "hard-skill" },
+    { "term": "Docker", "priority": "preferred", "category": "hard-skill" },
+    { "term": "CI/CD", "priority": "preferred", "category": "hard-skill" },
+    { "term": "idempotent", "priority": "preferred", "category": "hard-skill", "aliases": ["idempotency"] },
+    { "term": "observability", "priority": "preferred", "category": "hard-skill" },
+    { "term": "Terraform", "priority": "preferred", "category": "hard-skill" },
+    { "term": "payments", "priority": "context", "category": "domain", "aliases": ["payment", "payout", "payouts"] },
+    { "term": "Software Engineer", "priority": "context", "category": "title" }
+  ],
+  "description_text": "Software Engineer, Backend (New Grad) at Northwind Pay. Toronto, ON (Hybrid). Northwind Pay builds payout and reconciliation infrastructure for online marketplaces. What you'll do: build and operate backend services that move money between marketplaces and their sellers; design reliable, idempotent APIs used by internal teams and external partners; own services in production including on-call, observability and incident follow-ups; collaborate with product and risk teams. What we're looking for: BS in Computer Science or equivalent, graduating by mid-2026; proficiency in Go, Java, or Python; experience with relational databases such as PostgreSQL; understanding of distributed systems fundamentals; clear written communication. Nice to have: Kafka or other event streaming, Kubernetes and Docker, CI/CD and automated testing, Terraform, payments or fintech experience. You thrive in a fast-paced environment."
+}

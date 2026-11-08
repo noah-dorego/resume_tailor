@@ -1,0 +1,48 @@
+{
+  "source": {
+    "url": "https://jobs.ashbyhq.com/lattice-ai/7c9e2f10-5a3b-4c8d-b1e2-0f6a7d8c9b10",
+    "method": "json-ld",
+    "confidence": "high",
+    "attempted": ["https://jobs.ashbyhq.com/lattice-ai/7c9e2f10-5a3b-4c8d-b1e2-0f6a7d8c9b10"],
+    "retrieved": "2026-11-07"
+  },
+  "company": "Lattice AI",
+  "title": "Software Engineer, AI Platform",
+  "location": "New York, NY or Toronto, ON",
+  "employment_type": "Full-time",
+  "seniority": "mid",
+  "years_experience": 3,
+  "domain": "enterprise AI tooling",
+  "company_summary": "Lattice AI builds a platform that lets enterprises deploy retrieval-augmented assistants over their internal documents.",
+  "responsibilities": [
+    "Build retrieval and evaluation pipelines for LLM-powered assistants",
+    "Design Python services and APIs that serve embeddings and search at low latency",
+    "Run evaluations that measure answer quality and drive model and prompt changes",
+    "Operate services on AWS with Docker and Kubernetes"
+  ],
+  "requirements": [
+    { "text": "3+ years of professional software engineering experience", "category": "core-technical", "required": true },
+    { "text": "Strong Python, including FastAPI or similar frameworks", "category": "core-technical", "required": true },
+    { "text": "Hands-on experience building RAG or LLM applications", "category": "core-technical", "required": true },
+    { "text": "Experience with vector search (pgvector, Pinecone, or similar)", "category": "core-technical", "required": true },
+    { "text": "Experience designing evaluation sets for ML or LLM systems", "category": "supporting-technical", "required": false },
+    { "text": "AWS, Docker, and Kubernetes in production", "category": "supporting-technical", "required": false },
+    { "text": "Experience with PyTorch or model fine-tuning", "category": "nice-to-have", "required": false },
+    { "text": "Excellent written communication", "category": "soft-skill", "required": true }
+  ],
+  "keywords": [
+    { "term": "Python", "priority": "required", "category": "hard-skill" },
+    { "term": "FastAPI", "priority": "required", "category": "hard-skill" },
+    { "term": "RAG", "priority": "required", "category": "hard-skill" },
+    { "term": "LLM", "priority": "required", "category": "hard-skill" },
+    { "term": "vector search", "priority": "required", "category": "hard-skill", "aliases": ["pgvector", "embeddings"] },
+    { "term": "evaluation", "priority": "preferred", "category": "hard-skill", "aliases": ["eval set", "evals"] },
+    { "term": "AWS", "priority": "preferred", "category": "hard-skill" },
+    { "term": "Docker", "priority": "preferred", "category": "hard-skill" },
+    { "term": "Kubernetes", "priority": "preferred", "category": "hard-skill" },
+    { "term": "PyTorch", "priority": "preferred", "category": "hard-skill" },
+    { "term": "fine-tuning", "priority": "preferred", "category": "hard-skill" },
+    { "term": "Software Engineer", "priority": "context", "category": "title" }
+  ],
+  "description_text": "Software Engineer, AI Platform at Lattice AI (New York or Toronto). Lattice AI builds a platform that lets enterprises deploy retrieval-augmented assistants over internal documents. You will build retrieval and evaluation pipelines for LLM-powered assistants, design Python services and APIs that serve embeddings and search at low latency, run evaluations that measure answer quality, and operate services on AWS with Docker and Kubernetes. Requirements: 3+ years of professional software engineering; strong Python including FastAPI; hands-on RAG or LLM application experience; vector search experience (pgvector, Pinecone, or similar); excellent written communication. Nice to have: designing evaluation sets, PyTorch or fine-tuning experience, AWS/Docker/Kubernetes in production."
+}

@@ -1,0 +1,16 @@
+# Personal data and generated resumes stay local
+personal_info.json
+output/
+
+# Python
+__pycache__/
+*.pyc
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.xdv
+*.fls
+*.fdb_latexmk
+*.synctex.gz

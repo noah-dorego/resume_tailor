@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "tailored_resume.json",
+  "description": "The skill's selection for one job. render.py turns this into resume.tex. All text is plain (no LaTeX); render.py escapes it.",
+  "type": "object",
+  "required": ["header", "section_order", "education", "experience", "skills"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "company": { "type": "string" },
+        "role": { "type": "string" },
+        "generated": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "source_url": { "type": "string" }
+      }
+    },
+    "header": {
+      "type": "object",
+      "required": ["name"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "phone": { "type": "string" },
+        "email": { "type": "string" },
+        "location": { "type": "string" },
+        "links": { "type": "array", "maxItems": 3, "items": { "$ref": "#/$defs/link" } }
+      }
+    },
+    "section_order": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "enum": ["education", "experience", "projects", "skills", "achievements", "interests"] }
+    },
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["institution", "degree", "dates"],
+        "additionalProperties": false,
+        "properties": {
+          "institution": { "type": "string", "minLength": 1 },
+          "location": { "type": "string" },
+          "degree": { "type": "string", "minLength": 1, "description": "Degree line as printed, e.g. \"B.S. in Computer Science, Minor in Mathematics\"" },
+          "dates": { "$ref": "#/$defs/dateRange" },
+          "details": { "$ref": "#/$defs/bullets", "description": "Optional lines such as GPA or relevant coursework" }
+        }
+      }
+    },
+    "experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["company", "roles"],
+        "additionalProperties": false,
+        "properties": {
+          "company": { "type": "string", "minLength": 1 },
+          "location": { "type": "string" },
+          "roles": {
+            "type": "array",
+            "minItems": 1,
+            "description": "Several roles at one company render with Jake's multiple-positions heading. Most recent first.",
+            "items": {
+              "type": "object",
+              "required": ["title", "dates", "bullets"],
+              "additionalProperties": false,
+              "properties": {
+                "title": { "type": "string", "minLength": 1 },
+                "team": { "type": "string" },
+                "dates": { "$ref": "#/$defs/dateRange" },
+                "bullets": { "$ref": "#/$defs/bullets" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "tech_stack", "bullets"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "tech_stack": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+          "dates": { "$ref": "#/$defs/dateRange" },
+          "link": { "$ref": "#/$defs/link" },
+          "bullets": { "$ref": "#/$defs/bullets" }
+        }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "required": ["label", "items"],
+        "additionalProperties": false,
+        "properties": {
+          "label": { "type": "string", "minLength": 1 },
+          "items": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } }
+        }
+      }
+    },
+    "achievements": { "$ref": "#/$defs/bullets" },
+    "interests": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+  },
+  "$defs": {
+    "yearMonth": { "type": "string", "pattern": "^\\d{4}-(0[1-9]|1[0-2])$" },
+    "dateRange": {
+      "type": "object",
+      "required": ["start", "end"],
+      "additionalProperties": false,
+      "properties": {
+        "start": { "$ref": "#/$defs/yearMonth" },
+        "end": { "type": "string", "pattern": "^(\\d{4}-(0[1-9]|1[0-2])|present)$" }
+      }
+    },
+    "link": {
+      "type": "object",
+      "required": ["url"],
+      "additionalProperties": false,
+      "properties": {
+        "label": { "type": "string" },
+        "url": { "type": "string", "pattern": "^(https?://|mailto:)" },
+        "display": { "type": "string", "description": "Text to print. Defaults to the URL without scheme or www." }
+      }
+    },
+    "bullets": { "type": "array", "items": { "type": "string", "minLength": 1, "maxLength": 240 } }
+  }
+}

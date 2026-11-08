@@ -1,0 +1,188 @@
+{
+  "$schema": "./.claude/skills/resume-tailor/schemas/personal_info.schema.json",
+  "name": "Alex Rivera",
+  "contact_info": {
+    "email": "alex.rivera@example.com",
+    "phone": "555-123-4567",
+    "location": "Toronto, ON"
+  },
+  "links": [
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/alexrivera" },
+    { "label": "GitHub", "url": "https://github.com/alexrivera" },
+    { "label": "Portfolio", "url": "https://alexrivera.dev" }
+  ],
+  "technical_skills": {
+    "languages": ["Python", "TypeScript", "JavaScript", "Java", "Go", "SQL", "C++", "Bash"],
+    "frameworks": ["React", "Next.js", "Node.js", "Express", "FastAPI", "Django", "Spring Boot", "pytest", "Jest"],
+    "infra": ["AWS (Lambda, S3, ECS)", "Docker", "Kubernetes", "Terraform", "GitHub Actions", "Kafka"],
+    "dbms": ["PostgreSQL", "Redis", "MongoDB", "DynamoDB"],
+    "ai_tools": ["OpenAI API", "LangChain", "Cursor", "Claude Code", "pgvector"],
+    "os": ["Linux", "macOS", "Windows"],
+    "others": ["Git", "REST APIs", "GraphQL", "gRPC", "Figma", "Agile/Scrum"]
+  },
+  "education": [
+    {
+      "institution": "Northfield University",
+      "degree": "Bachelor of Science in Computer Science",
+      "minor": "Statistics",
+      "location": "Toronto, ON",
+      "dates": { "start": "2022-09", "end": "2026-04" },
+      "gpa": "3.8/4.0",
+      "coursework": ["Data Structures", "Algorithms", "Operating Systems", "Distributed Systems", "Databases", "Machine Learning", "Computer Networks"],
+      "honors": ["Dean's List (6 terms)"]
+    }
+  ],
+  "work_experience": [
+    {
+      "title": "Software Engineer Intern",
+      "company": "Lumen Payments",
+      "team": "Merchant Platform",
+      "location": "Toronto, ON",
+      "dates": { "start": "2025-05", "end": "2025-08" },
+      "tech_stack": ["Go", "PostgreSQL", "Kafka", "Kubernetes", "gRPC"],
+      "accomplishments": [
+        {
+          "text": "Built a Go service that reconciles merchant payouts against ledger events from Kafka, replacing a nightly batch job",
+          "skills": ["Go", "Kafka", "PostgreSQL", "event-driven architecture"],
+          "metrics": ["reconciliation delay cut from 24 hours to under 5 minutes"],
+          "pin": true
+        },
+        {
+          "text": "Added idempotency keys and retry handling to the payout API, eliminating duplicate payouts seen in production",
+          "skills": ["API design", "distributed systems", "Go"],
+          "metrics": ["0 duplicate payouts in the 8 weeks after launch, down from ~12 per month"]
+        },
+        {
+          "text": "Wrote gRPC load tests and tuned PostgreSQL indexes for the merchant balance endpoint",
+          "skills": ["gRPC", "PostgreSQL", "performance"],
+          "metrics": ["p95 latency reduced from 420ms to 90ms"]
+        },
+        {
+          "text": "Deployed services with Helm charts to the team's Kubernetes cluster and added Grafana dashboards and alerts",
+          "skills": ["Kubernetes", "Helm", "observability", "Grafana"]
+        },
+        "Presented the reconciliation design in an architecture review with 3 senior engineers and incorporated their feedback"
+      ]
+    },
+    {
+      "title": "Full-Stack Developer Intern",
+      "company": "Brightpath Learning",
+      "team": "Student Experience",
+      "location": "Remote",
+      "dates": { "start": "2024-05", "end": "2024-08" },
+      "tech_stack": ["TypeScript", "React", "Next.js", "Node.js", "PostgreSQL", "AWS"],
+      "accomplishments": [
+        {
+          "text": "Shipped a React and Next.js assignment dashboard used by students across 40 partner schools",
+          "skills": ["React", "Next.js", "TypeScript", "frontend"],
+          "metrics": ["~15,000 weekly active students"]
+        },
+        {
+          "text": "Designed REST endpoints in Node.js and Express for assignment submissions, with PostgreSQL row-level security per school",
+          "skills": ["Node.js", "Express", "REST APIs", "PostgreSQL", "security"]
+        },
+        {
+          "text": "Moved image uploads to S3 presigned URLs with a Lambda thumbnail generator, removing upload timeouts",
+          "skills": ["AWS", "Lambda", "S3", "serverless"],
+          "metrics": ["upload failure rate dropped from 6% to under 0.5%"]
+        },
+        {
+          "text": "Raised frontend test coverage with Jest and React Testing Library and added the suite to GitHub Actions",
+          "skills": ["Jest", "testing", "CI/CD", "GitHub Actions"],
+          "metrics": ["coverage from 35% to 78%"]
+        }
+      ]
+    },
+    {
+      "title": "Teaching Assistant, Data Structures",
+      "company": "Northfield University",
+      "location": "Toronto, ON",
+      "dates": { "start": "2023-09", "end": "2024-04" },
+      "accomplishments": [
+        "Led weekly tutorials for 35 students on trees, graphs, and hashing in Java",
+        "Built a Python autograder with Docker sandboxes that cut assignment grading time for 4 TAs",
+        {
+          "text": "Held office hours and wrote practice problem sets with solutions for midterm and final exams",
+          "skills": ["mentoring", "communication"]
+        }
+      ]
+    }
+  ],
+  "personal_projects": [
+    {
+      "name": "DocuChat",
+      "description": "Retrieval-augmented chat over personal PDFs",
+      "tech_stack": ["Python", "FastAPI", "LangChain", "OpenAI API", "PostgreSQL", "pgvector", "React"],
+      "links": [{ "label": "GitHub", "url": "https://github.com/alexrivera/docuchat" }],
+      "dates": { "start": "2025-01", "end": "present" },
+      "accomplishments": [
+        {
+          "text": "Built a retrieval-augmented generation (RAG) app that answers questions over uploaded PDFs with cited sources",
+          "skills": ["LLM", "RAG", "Python", "FastAPI"],
+          "pin": true
+        },
+        {
+          "text": "Stored embeddings in PostgreSQL with pgvector and added hybrid keyword and vector search",
+          "skills": ["PostgreSQL", "pgvector", "search"],
+          "metrics": ["answer accuracy on a 50-question eval set improved from 64% to 82%"]
+        },
+        {
+          "text": "Containerized the stack with Docker Compose and deployed it to AWS ECS behind an application load balancer",
+          "skills": ["Docker", "AWS", "ECS"]
+        }
+      ]
+    },
+    {
+      "name": "TrailMix",
+      "description": "Hiking route planner mobile web app",
+      "tech_stack": ["TypeScript", "Next.js", "Mapbox", "Redis", "Vercel"],
+      "links": [{ "label": "Live", "url": "https://trailmix.alexrivera.dev" }],
+      "dates": { "start": "2024-01", "end": "2024-04" },
+      "accomplishments": [
+        {
+          "text": "Built a Next.js app that plans hiking routes with elevation profiles from Mapbox data",
+          "skills": ["Next.js", "TypeScript", "frontend"],
+          "metrics": ["1,200 monthly users after a Reddit launch"]
+        },
+        {
+          "text": "Cached route computations in Redis to keep map interactions responsive",
+          "skills": ["Redis", "caching", "performance"],
+          "metrics": ["median route load time cut from 1.8s to 300ms"]
+        }
+      ]
+    },
+    {
+      "name": "tinykv",
+      "description": "Course-inspired distributed key-value store",
+      "tech_stack": ["Go", "Raft", "gRPC"],
+      "links": [{ "label": "GitHub", "url": "https://github.com/alexrivera/tinykv" }],
+      "dates": { "start": "2023-10", "end": "2023-12" },
+      "accomplishments": [
+        {
+          "text": "Implemented Raft leader election and log replication in Go for a sharded key-value store",
+          "skills": ["Go", "distributed systems", "Raft", "consensus"]
+        },
+        {
+          "text": "Wrote a fault-injection test harness that kills and partitions nodes to verify linearizability",
+          "skills": ["testing", "distributed systems"]
+        }
+      ]
+    },
+    {
+      "name": "Spotify Mood Mixer",
+      "description": "Playlist generator from listening history",
+      "tech_stack": ["Python", "Django", "Spotify Web API", "scikit-learn"],
+      "dates": { "start": "2023-05", "end": "2023-07" },
+      "accomplishments": [
+        "Clustered 10,000+ tracks by audio features with k-means to generate mood-based playlists",
+        "Implemented Spotify OAuth and background refresh jobs in Django"
+      ]
+    }
+  ],
+  "achievements": [
+    { "text": "1st place out of 60 teams, HackNorth 2025, for an accessibility-focused browser extension", "date": "2025-02", "skills": ["hackathon", "JavaScript"] },
+    { "text": "Top 5% in Google Kick Start Round C 2023", "date": "2023-07", "skills": ["algorithms"] },
+    "AWS Certified Cloud Practitioner (2024)"
+  ],
+  "interests": ["Rock climbing", "Mechanical keyboards", "Indie game development", "Film photography"]
+}

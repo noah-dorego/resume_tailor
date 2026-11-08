@@ -1,0 +1,47 @@
+{
+  "source": {
+    "url": "https://jobs.lever.co/campfire/0b7f3a7e-2c1d-4d6e-9a51-6f2b8c9d1e00",
+    "method": "json-ld",
+    "confidence": "high",
+    "attempted": ["https://jobs.lever.co/campfire/0b7f3a7e-2c1d-4d6e-9a51-6f2b8c9d1e00"],
+    "retrieved": "2026-11-07"
+  },
+  "company": "Campfire",
+  "title": "Frontend Engineer I",
+  "location": "Remote (Canada)",
+  "employment_type": "Full-time",
+  "seniority": "junior",
+  "years_experience": 1,
+  "domain": "consumer social / community apps",
+  "company_summary": "Campfire makes group-planning apps for outdoor clubs and community events.",
+  "responsibilities": [
+    "Build accessible, responsive product features in React and TypeScript",
+    "Own features end to end, from design review in Figma to production metrics",
+    "Improve web performance and Core Web Vitals across the app",
+    "Write tests and keep the component library healthy"
+  ],
+  "requirements": [
+    { "text": "1+ years building production web apps with React and TypeScript", "category": "core-technical", "required": true },
+    { "text": "Strong HTML, CSS, and accessibility (WCAG) fundamentals", "category": "core-technical", "required": true },
+    { "text": "Experience with Next.js or another SSR framework", "category": "supporting-technical", "required": false },
+    { "text": "Experience testing UI with Jest and React Testing Library", "category": "process", "required": true },
+    { "text": "Comfort working from Figma designs with product designers", "category": "soft-skill", "required": false },
+    { "text": "GraphQL experience", "category": "nice-to-have", "required": false },
+    { "text": "Love of the outdoors is a plus", "category": "nice-to-have", "required": false }
+  ],
+  "keywords": [
+    { "term": "React", "priority": "required", "category": "hard-skill" },
+    { "term": "TypeScript", "priority": "required", "category": "hard-skill" },
+    { "term": "accessibility", "priority": "required", "category": "hard-skill", "aliases": ["accessible", "WCAG", "a11y"] },
+    { "term": "CSS", "priority": "required", "category": "hard-skill" },
+    { "term": "Jest", "priority": "required", "category": "hard-skill" },
+    { "term": "React Testing Library", "priority": "required", "category": "hard-skill" },
+    { "term": "Next.js", "priority": "preferred", "category": "hard-skill" },
+    { "term": "Figma", "priority": "preferred", "category": "hard-skill" },
+    { "term": "GraphQL", "priority": "preferred", "category": "hard-skill" },
+    { "term": "Core Web Vitals", "priority": "preferred", "category": "hard-skill", "aliases": ["web performance"] },
+    { "term": "Frontend Engineer", "priority": "context", "category": "title", "aliases": ["Front-end", "Frontend"] },
+    { "term": "outdoors", "priority": "context", "category": "domain", "aliases": ["hiking", "outdoor", "climbing"] }
+  ],
+  "description_text": "Frontend Engineer I at Campfire (Remote, Canada). Campfire makes group-planning apps for outdoor clubs and community events. You will build accessible, responsive product features in React and TypeScript, own features end to end from Figma design review to production metrics, improve web performance and Core Web Vitals, and write tests for the component library. Requirements: 1+ years building production web apps with React and TypeScript; strong HTML, CSS, and accessibility (WCAG) fundamentals; experience testing UI with Jest and React Testing Library. Nice to have: Next.js or another SSR framework, GraphQL, comfort working from Figma designs, and a love of the outdoors."
+}

@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "company": "Northwind Pay",
+    "role": "Software Engineer, Backend (New Grad)",
+    "generated": "2026-11-07",
+    "source_url": "https://boards.greenhouse.io/northwindpay/jobs/1234567"
+  },
+  "header": {
+    "name": "Alex Rivera",
+    "phone": "555-123-4567",
+    "email": "alex.rivera@example.com",
+    "links": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/alexrivera" },
+      { "label": "GitHub", "url": "https://github.com/alexrivera" }
+    ]
+  },
+  "section_order": ["education", "experience", "projects", "skills"],
+  "education": [
+    {
+      "institution": "Northfield University",
+      "location": "Toronto, ON",
+      "degree": "Bachelor of Science in Computer Science, Minor in Statistics",
+      "dates": { "start": "2022-09", "end": "2026-04" },
+      "details": ["GPA: 3.8/4.0; Relevant Coursework: Distributed Systems, Databases, Operating Systems, Computer Networks"]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Lumen Payments",
+      "location": "Toronto, ON",
+      "roles": [
+        {
+          "title": "Software Engineer Intern",
+          "team": "Merchant Platform",
+          "dates": { "start": "2025-05", "end": "2025-08" },
+          "bullets": [
+            "Built a Go payout reconciliation service consuming Kafka ledger events, cutting reconciliation delay from 24 hours to under 5 minutes",
+            "Added idempotency keys and retries to the payout API, taking duplicate payouts from ~12 per month to 0 in the 8 weeks after launch",
+            "Reduced p95 latency of the merchant balance gRPC endpoint from 420ms to 90ms with load tests and PostgreSQL index tuning",
+            "Deployed services to Kubernetes with Helm and added Grafana dashboards and alerts for on-call visibility"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Brightpath Learning",
+      "location": "Remote",
+      "roles": [
+        {
+          "title": "Full-Stack Developer Intern",
+          "team": "Student Experience",
+          "dates": { "start": "2024-05", "end": "2024-08" },
+          "bullets": [
+            "Designed RESTful APIs in Node.js & Express for assignment submissions, enforcing per-school PostgreSQL row-level security",
+            "Cut image upload failures from 6% to under 0.5% by moving uploads to S3 presigned URLs with a Lambda thumbnail generator",
+            "Raised test coverage from 35% to 78% with Jest and wired the suite into GitHub Actions CI/CD"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Northfield University",
+      "location": "Toronto, ON",
+      "roles": [
+        {
+          "title": "Teaching Assistant, Data Structures",
+          "dates": { "start": "2023-09", "end": "2024-04" },
+          "bullets": [
+            "Built a Python autograder with Docker sandboxes that reduced grading time for a team of 4 TAs",
+            "Led weekly tutorials for 35 students on trees, graphs, and hashing in Java"
+          ]
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "tinykv",
+      "tech_stack": ["Go", "Raft", "gRPC"],
+      "dates": { "start": "2023-10", "end": "2023-12" },
+      "link": { "url": "https://github.com/alexrivera/tinykv" },
+      "bullets": [
+        "Implemented Raft leader election and log replication in Go for a sharded key-value store",
+        "Wrote a fault-injection harness that kills and partitions nodes to verify linearizability"
+      ]
+    },
+    {
+      "name": "DocuChat",
+      "tech_stack": ["Python", "FastAPI", "PostgreSQL", "pgvector", "Docker", "AWS ECS"],
+      "dates": { "start": "2025-01", "end": "present" },
+      "bullets": [
+        "Built a retrieval-augmented generation (RAG) app with FastAPI that answers questions over PDFs with cited sources",
+        "Raised answer accuracy on a 50-question eval set from 64% to 82% with hybrid keyword and pgvector search in PostgreSQL"
+      ]
+    }
+  ],
+  "skills": [
+    { "label": "Languages", "items": ["Go", "Python", "TypeScript", "Java", "SQL", "JavaScript", "C++", "Bash"] },
+    { "label": "Frameworks & Libraries", "items": ["gRPC", "Node.js", "Express", "FastAPI", "React", "Next.js", "Jest", "pytest"] },
+    { "label": "Cloud, DevOps & Databases", "items": ["PostgreSQL", "Kafka", "Kubernetes", "Docker", "AWS (Lambda, S3, ECS)", "Terraform", "GitHub Actions", "Redis"] },
+    { "label": "Tools & Platforms", "items": ["Git", "Linux", "Grafana", "Helm", "Claude Code", "Cursor"] }
+  ]
+}
